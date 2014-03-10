@@ -14,7 +14,12 @@
 
 		public void Move(string command)
 		{
-			
+			switch (command)
+			{
+				case "M":
+					_currentY++;
+					break;
+			}
 		}
 
 		public string CurrentPosition
