@@ -30,6 +30,11 @@
 				}
 			}
 		}
+		
+		public string CurrentPosition
+		{
+			get { return string.Format("{0} {1} {2}", _currentX, _currentY, _direction); }
+		}
 
 		private void MoveForward()
 		{
@@ -50,17 +55,12 @@
 			}
 		}
 
-		public string CurrentPosition
-		{
-			get { return string.Format("{0} {1} {2}", _currentX, _currentY, _direction); }
-		}
-
-		public void TurnRight()
+		private void TurnRight()
 		{
 			_direction = _direction == Direction.W ? Direction.N : _direction + 1;
 		}
 
-		public void TurnLeft()
+		private void TurnLeft()
 		{
 			_direction = _direction == Direction.N ? Direction.W : _direction - 1;
 		}
