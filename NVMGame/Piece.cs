@@ -19,7 +19,7 @@
 				switch (command)
 				{
 					case 'M':
-						_currentY++;
+						MoveForward();
 						break;
 					case 'R':
 						TurnRight();
@@ -28,6 +28,25 @@
 						TurnLeft();
 						break;
 				}
+			}
+		}
+
+		private void MoveForward()
+		{
+			switch (_direction)
+			{
+				case Direction.N:
+					_currentY++;
+					break;
+				case Direction.S:
+					_currentY--;
+					break;
+				case Direction.E:
+					_currentX++;
+					break;
+				case Direction.W:
+					_currentX--;
+					break;
 			}
 		}
 
