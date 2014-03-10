@@ -36,16 +36,16 @@
 			switch (_direction)
 			{
 				case Direction.N:
-					_currentY++;
+					IncrementY();
 					break;
 				case Direction.S:
-					_currentY--;
+					DecrementY();
 					break;
 				case Direction.E:
-					_currentX++;
+					IncrementX();
 					break;
 				case Direction.W:
-					_currentX--;
+					DecrementX();
 					break;
 			}
 		}
@@ -63,6 +63,26 @@
 		public void TurnLeft()
 		{
 			_direction = _direction == Direction.N ? Direction.W : _direction - 1;
+		}
+
+		private void IncrementY()
+		{
+			_currentY = _currentY == (board.GridHeight - 1) ? _currentY : _currentY + 1;
+		}
+
+		private void DecrementY()
+		{
+			_currentY = _currentY == 0 ? 0 : _currentY - 1;
+		}
+
+		private void IncrementX()
+		{
+			_currentX = _currentX == (board.GridWidth - 1) ? _currentX : _currentX + 1;
+		}
+
+		private void DecrementX()
+		{
+			_currentX = _currentX == 0 ? 0 : _currentX - 1;
 		}
 	}
 }
