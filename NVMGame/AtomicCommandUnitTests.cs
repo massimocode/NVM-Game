@@ -3,7 +3,7 @@
 namespace NVMGame
 {
 	[TestFixture]
-    public class UnitTests
+    public class AtomicCommandUnitTests
     {
 		[Test]
 		public void When_A_New_Piece_Is_Created_On_A_5_By_5_Board_Its_Position_Should_Be_0_0_N()

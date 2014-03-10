@@ -42,10 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CombinedCommandUnitTests.cs" />
     <Compile Include="Direction.cs" />
     <Compile Include="IBoard.cs" />
     <Compile Include="Piece.cs" />
-    <Compile Include="UnitTests.cs" />
+    <Compile Include="AtomicCommandUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
