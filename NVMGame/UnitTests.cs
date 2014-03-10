@@ -32,5 +32,15 @@ namespace NVMGame
 
 			Assert.AreEqual("0 0 E", piece.CurrentPosition);
 		}
+
+		[Test]
+		public void When_A_New_Piece_Is_Created_On_A_5_By_5_Board_And_Given_The_Command_L_Its_Position_Should_Be_0_0_W()
+		{
+			var piece = new Piece(new Board(5, 5));
+
+			piece.Move("L");
+
+			Assert.AreEqual("0 0 W", piece.CurrentPosition);
+		}
     }
 }
