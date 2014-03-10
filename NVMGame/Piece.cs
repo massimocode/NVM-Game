@@ -19,7 +19,7 @@
 
 		public string CurrentPosition
 		{
-			get { return ""; }
+			get { return string.Format("{0} {1} {2}", _currentX, _currentY, _direction); }
 		}
 	}
 }
