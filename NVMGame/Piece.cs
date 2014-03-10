@@ -12,19 +12,22 @@
 			this.board = board;
 		}
 
-		public void Move(string command)
+		public void Move(string commands)
 		{
-			switch (command)
+			foreach (var command in commands.ToCharArray())
 			{
-				case "M":
-					_currentY++;
-					break;
-				case "R":
-					TurnRight();
-					break;
-				case "L":
-					TurnLeft();
-					break;
+				switch (command)
+				{
+					case 'M':
+						_currentY++;
+						break;
+					case 'R':
+						TurnRight();
+						break;
+					case 'L':
+						TurnLeft();
+						break;
+				}
 			}
 		}
 
